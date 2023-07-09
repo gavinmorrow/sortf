@@ -7,25 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		86F178012A58385E00859809 /* sortfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F178002A58385E00859809 /* sortfApp.swift */; };
-		86F178052A58385E00859809 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F178042A58385E00859809 /* ContentView.swift */; };
-		86F178072A58386500859809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F178062A58386500859809 /* Assets.xcassets */; };
-		86F1780B2A58386500859809 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F1780A2A58386500859809 /* Preview Assets.xcassets */; };
-		86F178502A5AD1CE00859809 /* SortfDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F1784F2A5AD1CD00859809 /* SortfDocument.swift */; };
+		86920E702A5B10F300146F5D /* SortfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86920E6F2A5B10F300146F5D /* SortfApp.swift */; };
+		86920E722A5B10F300146F5D /* SortfDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86920E712A5B10F300146F5D /* SortfDocument.swift */; };
+		86920E742A5B10F300146F5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86920E732A5B10F300146F5D /* ContentView.swift */; };
+		86920E762A5B10F900146F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86920E752A5B10F900146F5D /* Assets.xcassets */; };
+		86920E7B2A5B10F900146F5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86920E7A2A5B10F900146F5D /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		86F177FD2A58385E00859809 /* sortf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sortf.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		86F178002A58385E00859809 /* sortfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sortfApp.swift; sourceTree = "<group>"; };
-		86F178042A58385E00859809 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		86F178062A58386500859809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		86F178082A58386500859809 /* sortf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sortf.entitlements; sourceTree = "<group>"; };
-		86F1780A2A58386500859809 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		86F1784F2A5AD1CD00859809 /* SortfDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortfDocument.swift; sourceTree = "<group>"; };
+		86920E6C2A5B10F300146F5D /* sortf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sortf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86920E6F2A5B10F300146F5D /* SortfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortfApp.swift; sourceTree = "<group>"; };
+		86920E712A5B10F300146F5D /* SortfDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortfDocument.swift; sourceTree = "<group>"; };
+		86920E732A5B10F300146F5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86920E752A5B10F900146F5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86920E772A5B10F900146F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86920E782A5B10F900146F5D /* sortf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sortf.entitlements; sourceTree = "<group>"; };
+		86920E7A2A5B10F900146F5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		86F177FA2A58385E00859809 /* Frameworks */ = {
+		86920E692A5B10F300146F5D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,39 +36,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		86F177F42A58385E00859809 = {
+		86920E632A5B10F300146F5D = {
 			isa = PBXGroup;
 			children = (
-				86F177FF2A58385E00859809 /* sortf */,
-				86F177FE2A58385E00859809 /* Products */,
+				86920E6E2A5B10F300146F5D /* sortf */,
+				86920E6D2A5B10F300146F5D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		86F177FE2A58385E00859809 /* Products */ = {
+		86920E6D2A5B10F300146F5D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				86F177FD2A58385E00859809 /* sortf.app */,
+				86920E6C2A5B10F300146F5D /* sortf.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		86F177FF2A58385E00859809 /* sortf */ = {
+		86920E6E2A5B10F300146F5D /* sortf */ = {
 			isa = PBXGroup;
 			children = (
-				86F178002A58385E00859809 /* sortfApp.swift */,
-				86F178042A58385E00859809 /* ContentView.swift */,
-				86F1784F2A5AD1CD00859809 /* SortfDocument.swift */,
-				86F178062A58386500859809 /* Assets.xcassets */,
-				86F178082A58386500859809 /* sortf.entitlements */,
-				86F178092A58386500859809 /* Preview Content */,
+				86920E6F2A5B10F300146F5D /* SortfApp.swift */,
+				86920E712A5B10F300146F5D /* SortfDocument.swift */,
+				86920E732A5B10F300146F5D /* ContentView.swift */,
+				86920E752A5B10F900146F5D /* Assets.xcassets */,
+				86920E772A5B10F900146F5D /* Info.plist */,
+				86920E782A5B10F900146F5D /* sortf.entitlements */,
+				86920E792A5B10F900146F5D /* Preview Content */,
 			);
 			path = sortf;
 			sourceTree = "<group>";
 		};
-		86F178092A58386500859809 /* Preview Content */ = {
+		86920E792A5B10F900146F5D /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				86F1780A2A58386500859809 /* Preview Assets.xcassets */,
+				86920E7A2A5B10F900146F5D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -75,13 +77,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		86F177FC2A58385E00859809 /* sortf */ = {
+		86920E6B2A5B10F300146F5D /* sortf */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 86F1780E2A58386500859809 /* Build configuration list for PBXNativeTarget "sortf" */;
+			buildConfigurationList = 86920E7E2A5B10F900146F5D /* Build configuration list for PBXNativeTarget "sortf" */;
 			buildPhases = (
-				86F177F92A58385E00859809 /* Sources */,
-				86F177FA2A58385E00859809 /* Frameworks */,
-				86F177FB2A58385E00859809 /* Resources */,
+				86920E682A5B10F300146F5D /* Sources */,
+				86920E692A5B10F300146F5D /* Frameworks */,
+				86920E6A2A5B10F300146F5D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -89,25 +91,25 @@
 			);
 			name = sortf;
 			productName = sortf;
-			productReference = 86F177FD2A58385E00859809 /* sortf.app */;
+			productReference = 86920E6C2A5B10F300146F5D /* sortf.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		86F177F52A58385E00859809 /* Project object */ = {
+		86920E642A5B10F300146F5D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					86F177FC2A58385E00859809 = {
+					86920E6B2A5B10F300146F5D = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 86F177F82A58385E00859809 /* Build configuration list for PBXProject "sortf" */;
+			buildConfigurationList = 86920E672A5B10F300146F5D /* Build configuration list for PBXProject "sortf" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,43 +117,43 @@
 				en,
 				Base,
 			);
-			mainGroup = 86F177F42A58385E00859809;
-			productRefGroup = 86F177FE2A58385E00859809 /* Products */;
+			mainGroup = 86920E632A5B10F300146F5D;
+			productRefGroup = 86920E6D2A5B10F300146F5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				86F177FC2A58385E00859809 /* sortf */,
+				86920E6B2A5B10F300146F5D /* sortf */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		86F177FB2A58385E00859809 /* Resources */ = {
+		86920E6A2A5B10F300146F5D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86F1780B2A58386500859809 /* Preview Assets.xcassets in Resources */,
-				86F178072A58386500859809 /* Assets.xcassets in Resources */,
+				86920E7B2A5B10F900146F5D /* Preview Assets.xcassets in Resources */,
+				86920E762A5B10F900146F5D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		86F177F92A58385E00859809 /* Sources */ = {
+		86920E682A5B10F300146F5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86F178012A58385E00859809 /* sortfApp.swift in Sources */,
-				86F178052A58385E00859809 /* ContentView.swift in Sources */,
-				86F178502A5AD1CE00859809 /* SortfDocument.swift in Sources */,
+				86920E702A5B10F300146F5D /* SortfApp.swift in Sources */,
+				86920E722A5B10F300146F5D /* SortfDocument.swift in Sources */,
+				86920E742A5B10F300146F5D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		86F1780C2A58386500859809 /* Debug */ = {
+		86920E7C2A5B10F900146F5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +214,7 @@
 			};
 			name = Debug;
 		};
-		86F1780D2A58386500859809 /* Release */ = {
+		86920E7D2A5B10F900146F5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -265,7 +267,7 @@
 			};
 			name = Release;
 		};
-		86F1780F2A58386500859809 /* Debug */ = {
+		86920E7F2A5B10F900146F5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -276,11 +278,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"sortf/Preview Content\"";
 				DEVELOPMENT_TEAM = 2K686Y87BH;
 				ENABLE_HARDENED_RUNTIME = YES;
-				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sortf/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Sorting photos";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -291,6 +291,8 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphonesimulator*]" = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -306,7 +308,7 @@
 			};
 			name = Debug;
 		};
-		86F178102A58386500859809 /* Release */ = {
+		86920E802A5B10F900146F5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -317,11 +319,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"sortf/Preview Content\"";
 				DEVELOPMENT_TEAM = 2K686Y87BH;
 				ENABLE_HARDENED_RUNTIME = YES;
-				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sortf/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Sorting photos";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -332,6 +332,8 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UISupportsDocumentBrowser[sdk=iphonesimulator*]" = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -350,25 +352,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		86F177F82A58385E00859809 /* Build configuration list for PBXProject "sortf" */ = {
+		86920E672A5B10F300146F5D /* Build configuration list for PBXProject "sortf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86F1780C2A58386500859809 /* Debug */,
-				86F1780D2A58386500859809 /* Release */,
+				86920E7C2A5B10F900146F5D /* Debug */,
+				86920E7D2A5B10F900146F5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		86F1780E2A58386500859809 /* Build configuration list for PBXNativeTarget "sortf" */ = {
+		86920E7E2A5B10F900146F5D /* Build configuration list for PBXNativeTarget "sortf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86F1780F2A58386500859809 /* Debug */,
-				86F178102A58386500859809 /* Release */,
+				86920E7F2A5B10F900146F5D /* Debug */,
+				86920E802A5B10F900146F5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 86F177F52A58385E00859809 /* Project object */;
+	rootObject = 86920E642A5B10F300146F5D /* Project object */;
 }
