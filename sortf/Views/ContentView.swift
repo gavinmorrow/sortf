@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Binding var document: SortfDocument
-
     var body: some View {
-        TextEditor(text: $document.text)
+        Text("Hello, world!")
     }
 }
 
 #Preview {
-    ContentView(document: .constant(SortfDocument()))
+    ContentView()
 }
