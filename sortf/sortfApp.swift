@@ -10,10 +10,9 @@ import SwiftData
 
 @main
 struct sortfApp: App {
-
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        DocumentGroup(newDocument: SortfDocument()) { file in
+            ContentView(document: file.$document)
         }
     }
 }
