@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		86F178012A58385E00859809 /* sortfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F178002A58385E00859809 /* sortfApp.swift */; };
-		86F178032A58385E00859809 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F178022A58385E00859809 /* Item.swift */; };
 		86F178052A58385E00859809 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F178042A58385E00859809 /* ContentView.swift */; };
 		86F178072A58386500859809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F178062A58386500859809 /* Assets.xcassets */; };
 		86F1780B2A58386500859809 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F1780A2A58386500859809 /* Preview Assets.xcassets */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		86F177FD2A58385E00859809 /* sortf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sortf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F178002A58385E00859809 /* sortfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sortfApp.swift; sourceTree = "<group>"; };
-		86F178022A58385E00859809 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		86F178042A58385E00859809 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		86F178062A58386500859809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86F178082A58386500859809 /* sortf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sortf.entitlements; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				86F178002A58385E00859809 /* sortfApp.swift */,
-				86F178022A58385E00859809 /* Item.swift */,
 				86F178042A58385E00859809 /* ContentView.swift */,
 				86F178062A58386500859809 /* Assets.xcassets */,
 				86F178082A58386500859809 /* sortf.entitlements */,
@@ -142,7 +139,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86F178032A58385E00859809 /* Item.swift in Sources */,
 				86F178012A58385E00859809 /* sortfApp.swift in Sources */,
 				86F178052A58385E00859809 /* ContentView.swift in Sources */,
 			);
@@ -276,8 +272,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"sortf/Preview Content\"";
 				DEVELOPMENT_TEAM = 2K686Y87BH;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Sorting photos";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -314,8 +312,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"sortf/Preview Content\"";
 				DEVELOPMENT_TEAM = 2K686Y87BH;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Sorting photos";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

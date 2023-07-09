@@ -7,50 +7,65 @@
 
 import SwiftUI
 import SwiftData
+import Photos
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    
+    @State var image: Image? = nil
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
+        VStack {
+            Text("Hello, world!")
+                .onAppear(perform: onload)
+            image?
+                .resizable()
+                .scaledToFit()
         }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+    
+    class A: NSObject, PHPhotoLibraryAvailabilityObserver {
+        func photoLibraryDidBecomeUnavailable(_ photoLibrary: PHPhotoLibrary) {
+            print("oh no")
+            print(photoLibrary)
+            fatalError("AHHHHHHH")
         }
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+    
+    func onload() {
+        let a = A()
+        
+        PHPhotoLibrary.shared().register(a)
+        PHPhotoLibrary.requestAuthorization(for: .readWrite) { status in
+//            debugPrint(status)
+            
+            guard status == .authorized else { print("not authorized"); return }
+            
+            let allPhotosOptions = PHFetchOptions()
+            allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+            let allPhotos = PHAsset.fetchAssets(with: allPhotosOptions)
+            
+//            debugPrint(allPhotos)
+            
+            let index = Int.random(in: 0..<allPhotos.count)
+            let media = allPhotos.object(at: index)
+            
+            guard media.playbackStyle == .image else { debugPrint("oh no", media); return }
+            
+//            debugPrint("media", media)
+            
+            let manager = PHImageManager.default()
+            let options = PHImageRequestOptions()
+            options.deliveryMode = .highQualityFormat
+            options.isNetworkAccessAllowed = true
+            options.resizeMode = .exact
+            manager.requestImage(for: media, targetSize: CGSize(width: media.pixelWidth, height: media.pixelHeight), contentMode: .aspectFit, options: options) { image, info in
+                if let image {
+                    let swiftuiImage = Image(nsImage: image)
+                    self.image = swiftuiImage
+                }
+                debugPrint("image", image ?? "no image")
+                debugPrint("info", info ?? "no info")
             }
         }
     }
@@ -58,5 +73,4 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
