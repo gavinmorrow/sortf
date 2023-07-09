@@ -24,48 +24,51 @@ struct ContentView: View {
         }
     }
     
-    class A: NSObject, PHPhotoLibraryAvailabilityObserver {
+    class AvailabilityObserver: NSObject, PHPhotoLibraryAvailabilityObserver {
         func photoLibraryDidBecomeUnavailable(_ photoLibrary: PHPhotoLibrary) {
-            print("oh no")
-            print(photoLibrary)
-            fatalError("AHHHHHHH")
+            fatalError("photo library became unavailable")
         }
     }
     
     func onload() {
-        let a = A()
+        let availabilityObserver = AvailabilityObserver()
         
-        PHPhotoLibrary.shared().register(a)
+        PHPhotoLibrary.shared().register(availabilityObserver)
         PHPhotoLibrary.requestAuthorization(for: .readWrite) { status in
-//            debugPrint(status)
+            // Ensure we can access the library
+            guard status == .authorized else { fatalError("not authorized") }
             
-            guard status == .authorized else { print("not authorized"); return }
-            
+            // Get all the photos
             let allPhotosOptions = PHFetchOptions()
             allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
             let allPhotos = PHAsset.fetchAssets(with: allPhotosOptions)
             
-//            debugPrint(allPhotos)
-            
+            // Select a random photo
             let index = Int.random(in: 0..<allPhotos.count)
             let media = allPhotos.object(at: index)
             
-            guard media.playbackStyle == .image else { debugPrint("oh no", media); return }
+            // Ensure that it is an image
+            guard media.playbackStyle == .image else { fatalError("selected media not an image") }
             
-//            debugPrint("media", media)
-            
-            let manager = PHImageManager.default()
+            // Create options for requesting the full image
             let options = PHImageRequestOptions()
             options.deliveryMode = .highQualityFormat
             options.isNetworkAccessAllowed = true
             options.resizeMode = .exact
-            manager.requestImage(for: media, targetSize: CGSize(width: media.pixelWidth, height: media.pixelHeight), contentMode: .aspectFit, options: options) { image, info in
-                if let image {
-                    let swiftuiImage = Image(nsImage: image)
-                    self.image = swiftuiImage
-                }
-                debugPrint("image", image ?? "no image")
-                debugPrint("info", info ?? "no info")
+            
+            // Request the image
+            let manager = PHImageManager.default()
+            manager.requestImage(
+                for: media,
+                targetSize: CGSize(width: media.pixelWidth, height: media.pixelHeight),
+                contentMode: .aspectFit,
+                options: options
+            ) { image, info in
+                // Only do something if an image gets returned
+                guard let image else { return; }
+                
+                // Set the image for the view
+                self.image = Image(nsImage: image)
             }
         }
     }
