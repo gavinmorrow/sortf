@@ -14,5 +14,6 @@ struct SortfApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: SortGroup.self)
     }
 }
