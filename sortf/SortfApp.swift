@@ -11,9 +11,8 @@ import SwiftData
 @main
 struct SortfApp: App {
     var body: some Scene {
-        WindowGroup {
+        DocumentGroup(editing: SortGroup.self, contentType: .sortGroup) {
             ContentView()
         }
-        .modelContainer(for: SortGroup.self)
     }
 }

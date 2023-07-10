@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.modelContext) var modelContext
-    
     var body: some View {
-        Text("Hello, world!")
+        EmptyView()
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(previewContainer)
 }
