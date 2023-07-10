@@ -14,7 +14,8 @@ final class SortGroup {
     let photos: [Photo]
     var rankings: [Ranking]
     
-    init(photos: [Photo]) {
+    init(photos: [Photo], rankings: [Ranking] = []) {
         self.photos = photos
+        self.rankings = rankings
     }
 }

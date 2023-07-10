@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import OrderedCollections
 
-struct Ranking: Codable {
-    let photos: [Photo]
+struct Ranking: Codable, Hashable {
+    let photos: OrderedSet<Photo.Id>
     
-    init(photos: [Photo]) {
+    init(photos: OrderedSet<Photo.Id>) {
         self.photos = photos
     }
 }

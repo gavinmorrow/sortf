@@ -6,13 +6,30 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @Query var sortGroups: [SortGroup]
+    
     var body: some View {
-        EmptyView()
+        List {
+            if sortGroups.count > 0 {
+                ForEach(sortGroups) { sortGroup in
+                    HStack {
+                        Text("\(sortGroup.photos.count)")
+                        Divider()
+                        Text("\(sortGroup.rankings.count)")
+                        Spacer()
+                    }
+                }
+            } else {
+                Text("No sort groups")
+            }
+        }
     }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(previewContainer)
 }

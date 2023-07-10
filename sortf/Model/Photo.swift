@@ -9,13 +9,17 @@ import Foundation
 import Photos
 
 struct Photo: Codable {
-    let id: String
+    typealias Id = String
+    let id: Id
     
-    init(id: String) {
+    var rankings: Set<Ranking>
+    
+    init(id: String, rankings: Set<Ranking> = []) {
         self.id = id
+        self.rankings = rankings
     }
     
-    init(id: PHCloudIdentifier) {
+    init(id: PHCloudIdentifier, rankings: Set<Ranking>) {
         self.init(id: id.stringValue)
     }
 }
