@@ -90,12 +90,12 @@
 		86920E6E2A5B10F300146F5D /* sortf */ = {
 			isa = PBXGroup;
 			children = (
-				866F6B312A5B281600724C8B /* Views */,
-				866F6B322A5B282800724C8B /* Model */,
-				866F6B392A5B759600724C8B /* Support */,
-				86920E6F2A5B10F300146F5D /* SortfApp.swift */,
-				86920E752A5B10F900146F5D /* Assets.xcassets */,
 				86920E772A5B10F900146F5D /* Info.plist */,
+				86920E6F2A5B10F300146F5D /* SortfApp.swift */,
+				866F6B322A5B282800724C8B /* Model */,
+				866F6B312A5B281600724C8B /* Views */,
+				866F6B392A5B759600724C8B /* Support */,
+				86920E752A5B10F900146F5D /* Assets.xcassets */,
 				86920E782A5B10F900146F5D /* sortf.entitlements */,
 				86920E792A5B10F900146F5D /* Preview Content */,
 			);
