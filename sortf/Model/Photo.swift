@@ -7,8 +7,10 @@
 
 import Foundation
 import Photos
+import SwiftData
 
-struct Photo: Codable {
+@Model
+class Photo {
     typealias Id = String
     let id: Id
     
@@ -19,7 +21,7 @@ struct Photo: Codable {
         self.rankings = rankings
     }
     
-    init(id: PHCloudIdentifier, rankings: Set<Ranking>) {
+    convenience init(id: PHCloudIdentifier, rankings: Set<Ranking>) {
         self.init(id: id.stringValue)
     }
 }

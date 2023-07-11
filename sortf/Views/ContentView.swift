@@ -9,22 +9,24 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Query var sortGroups: [SortGroup]
+    @Query var photos: [Photo]
     
     var body: some View {
-        List {
-            if sortGroups.count > 0 {
-                ForEach(sortGroups) { sortGroup in
-                    HStack {
-                        Text("\(sortGroup.photos.count)")
-                        Divider()
-                        Text("\(sortGroup.rankings.count)")
-                        Spacer()
+        NavigationStack {
+            Group {
+                if photos.count > 0 {
+                    ForEach(photos) { photo in
+                        HStack {
+                            Text(photo.id)
+                            Divider()
+                            Text("\(photo.rankings.count)")
+                        }
                     }
+                } else {
+                    Text("No photos")
                 }
-            } else {
-                Text("No sort groups")
             }
+            .navigationTitle("Photos")
         }
     }
 }

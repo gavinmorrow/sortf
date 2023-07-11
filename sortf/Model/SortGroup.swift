@@ -9,13 +9,13 @@ import Foundation
 import SwiftData
 import Photos
 
-@Model
-final class SortGroup {
-    let photos: [Photo]
-    var rankings: [Ranking]
-    
-    init(photos: [Photo], rankings: [Ranking] = []) {
-        self.photos = photos
-        self.rankings = rankings
-    }
-}
+//@Model
+//final class SortGroup {
+//    let photos: [Photo]
+//    var rankings: [Ranking]
+//    
+//    init(photos: [Photo], rankings: [Ranking] = []) {
+//        self.photos = photos
+//        self.rankings = rankings
+//    }
+//}

@@ -11,7 +11,7 @@ import SwiftData
 @main
 struct SortfApp: App {
     var body: some Scene {
-        DocumentGroup(editing: SortGroup.self, contentType: .sortGroup) {
+        DocumentGroup(editing: [Photo.self], contentType: .sortGroup) {
             ContentView()
         }
     }

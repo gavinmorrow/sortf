@@ -11,7 +11,7 @@ import SwiftData
 let previewContainer: ModelContainer = {
     do {
         let container = try ModelContainer(
-            for: SortGroup.self, ModelConfiguration(inMemory: true)
+            for: [Photo.self], ModelConfiguration(inMemory: true)
         )
         
 //        for card in SampleDeck.contents {
