@@ -12,21 +12,30 @@ struct ContentView: View {
     @Query var photos: [Photo]
     
     var body: some View {
-        NavigationStack {
-            Group {
-                if photos.count > 0 {
-                    ForEach(photos) { photo in
-                        HStack {
-                            Text(photo.id)
-                            Divider()
-                            Text("\(photo.rankings.count)")
-                        }
-                    }
-                } else {
-                    Text("No photos")
+        List(photos) { photo in
+            HStack {
+                Text(photo.id)
+                Divider()
+                Text("\(photo.rankings.count)")
+            }
+        }
+        .overlay {
+            if photos.isEmpty {
+                Text("No photos")
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .automatic) {
+                Button {
+                    print("Pressed!")
+                    
+                    // Add to photos
+                    
+                } label: {
+                    Image(systemName: "plus")
                 }
             }
-            .navigationTitle("Photos")
         }
     }
 }
